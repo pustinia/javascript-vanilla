@@ -1,3 +1,5 @@
+/*
+
 const title = document.getElementById("title");
 console.log(title); // called DOM
 // Document Object Module.
@@ -46,7 +48,9 @@ if("10" === 10){
 
 const age = prompt("How old are you");
 console.log(age);
+*/
 
+/* we want to set color by css
 const newTitle = document.querySelector("#newTitle");
 const BASE_COLOR = "rgb(52, 73, 94)";
 const OTHER_COLOR = "rgb(127, 140, 141)";
@@ -77,3 +81,41 @@ function handleOnline() {
 }
 window.addEventListener("offline", handleOffline);
 window.addEventListener("online", handleOnline);
+*/
+/*
+const title = document.querySelector('#title');
+const CLASS_CLICKED = "clicked";
+
+function handleClick() {
+    const currentClassName = title.className;
+    if(currentClassName !== CLASS_CLICKED){
+        title.className = CLASS_CLICKED;
+    }
+}
+
+function init() {
+    title.addEventListener("click",handleClick);
+}
+init();
+*/
+
+const title = document.querySelector('#title');
+const CLASS_CLICKED = "clicked";
+const CLASS_BTN = "btn";
+
+function handleClick() {
+    /*
+    const hasClass = title.classList.contains(CLASS_CLICKED);
+    if(hasClass){
+        title.classList.remove(CLASS_CLICKED);
+    }else{
+        title.classList.add(CLASS_CLICKED);
+    }*/
+    // easy to use
+    title.classList.toggle(CLASS_CLICKED);
+}
+
+function init() {
+    title.addEventListener("click",handleClick);
+}
+init();
